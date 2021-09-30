@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    line-height: 21px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
