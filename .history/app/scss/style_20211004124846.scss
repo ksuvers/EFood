@@ -463,21 +463,14 @@ h2 {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 78px;
             input {
                 border: none;
                 flex-grow: 1;
-                line-height: 30px;
-                font-size: 18px;
-                color: #363853;
-                opacity: 0.9;
                 &::placeholder {
                     font-size: 18px;
+                    line-height: 30px;
                     color: #363853;
                     opacity: 0.9;
-                    display: flex;
-                    line-height: 30px;
-                    align-items: center;
                 }
             }
             button {
@@ -493,99 +486,6 @@ h2 {
                 &::before {
                     position: absolute;
                     content: url(/img/vvector.png);
-                    left: 20px;
-                }
-            }
-        }
-    }
-}
-
-.footer {
-    padding: 40px 0 0 0;
-    .block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 25px;
-        .block_link {
-            margin-right: 115px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            .item_title {
-                margin-top: -25px;
-                margin-bottom: 25px;
-            }
-            .inf {
-                font-size: 16px;
-                line-height: 32px;
-                padding-left: 35px;
-                margin-bottom: 20px;
-                position: relative;
-            }
-            .inf-map::before {
-                position: absolute;
-                content: url(/img/Location.svg);
-                left: 0;
-            }
-            .inf-tel::before {
-                position: absolute;
-                content: url(/img/Calling.svg);
-                left: 0;
-            }
-            .inf-mail::before {
-                position: absolute;
-                content: url(/img/Message.svg);
-                left: 0;
-            }
-        }
-        .block_list {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .item {
-                .item_title {
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 49px;
-                    letter-spacing: 0.01em;
-                }
-                ul {
-                    li {
-                        font-size: 18px;
-                        line-height: 49px;
-                        letter-spacing: 0.01em;
-                    }
-                    li:not(:last-child) {
-                        margin-right: 0;
-                    }
-                    li+li {
-                        margin-right: 99px;
-                    }
-                }
-            }
-        }
-    }
-    .footer_copy {
-        height: 1px;
-        background: #96969626;
-        .block {
-            display: flex;
-            justify-content: space-between;
-            padding: 26px 0 36px 0;
-            .info {
-                font-size: 14px;
-                line-height: 14px;
-                color: #646464;
-            }
-            .link {
-                a {
-                    font-size: 14px;
-                    line-height: 14px;
-                    color: #646464;
-                }
-                a+a {
-                    margin-left: 50px;
                 }
             }
         }

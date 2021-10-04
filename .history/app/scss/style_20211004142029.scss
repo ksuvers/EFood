@@ -555,9 +555,7 @@ h2 {
                         font-size: 18px;
                         line-height: 49px;
                         letter-spacing: 0.01em;
-                    }
-                    li:not(:last-child) {
-                        margin-right: 0;
+                        a {}
                     }
                     li+li {
                         margin-right: 99px;
@@ -569,6 +567,7 @@ h2 {
     .footer_copy {
         height: 1px;
         background: #96969626;
+        opacity: 0.2;
         .block {
             display: flex;
             justify-content: space-between;
@@ -583,9 +582,6 @@ h2 {
                     font-size: 14px;
                     line-height: 14px;
                     color: #646464;
-                }
-                a+a {
-                    margin-left: 50px;
                 }
             }
         }
