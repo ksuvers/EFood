@@ -132,11 +132,13 @@ h2 {
 }
 
 .s2 {
+    padding: 50px 0;
     h2 {
         text-align: center;
     }
     .tabs {
         margin-top: 55px;
+        position: relative;
         ul {
             display: flex;
             justify-content: center;
@@ -178,6 +180,43 @@ h2 {
             }
         }
         .cont-slider {
+            overflow: hidden;
+            padding: 15px 15px 70px;
+            position: relative;
+            .btn_next {
+                position: absolute;
+                z-index: 5;
+                left: 50%;
+                bottom: 0;
+                margin-left: 70px;
+                display: flex;
+                justify-content: center;
+            }
+            .btn_prev {
+                position: absolute;
+                z-index: 5;
+                right: 50%;
+                margin-right: 70px;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+            }
+            .swiper_pag {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                .swiper-pagination-bullet {
+                    width: 12px;
+                    height: 12px;
+                    margin: 0;
+                }
+                .swiper-pagination-bullet-active {
+                    background-color: #FF6838;
+                }
+                .swiper-pagination-bullet+.swiper-pagination-bullet {
+                    margin-left: 14px;
+                }
+            }
             .swiper-wrapper {
                 display: flex;
                 justify-content: space-between;
@@ -265,17 +304,17 @@ h2 {
             position: relative;
             padding-left: 60px;
             &::before {
-                content: url(/img/timer-icon.svg);
+                content: url(../img/timer-icon.svg);
                 position: absolute;
                 left: 0;
                 bottom: -5px;
             }
         }
         .list-2::before {
-            content: url(/img/group-36209.svg);
+            content: url(../img/group-36209.svg);
         }
         .list-3::before {
-            content: url(/img/resturent-icon.svg);
+            content: url(../img/resturent-icon.svg);
         }
         .s3_btn {
             margin-top: 50px;
@@ -333,7 +372,7 @@ h2 {
                             padding-left: 30px;
                             position: relative;
                             &::before {
-                                content: url(/img/timer-1.svg);
+                                content: url(../img/timer-1.svg);
                                 position: absolute;
                                 left: 0;
                                 bottom: -5px;
@@ -396,38 +435,60 @@ h2 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .item {
-            max-width: 575px;
-            p {
-                font-size: 20px;
-                line-height: 45px;
-                letter-spacing: 0.5px;
-                position: relative;
-                margin-bottom: 60px;
-                &::after {
-                    position: absolute;
-                    content: url(/img/r.png);
-                    right: -25px;
-                    bottom: -30px;
-                }
-                &::before {
-                    position: absolute;
-                    content: url(/img/l.png);
-                    left: -35px;
-                    top: -5px;
-                }
+        .slider_text {
+            overflow: hidden;
+            position: relative;
+            .btn_next {
+                position: absolute;
+                bottom: 0;
+                right: 0;
             }
-            .name {
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 24px;
-                margin-bottom: 18px;
-                color: #FF7A50;
+            .btn_prev {
+                position: absolute;
+                bottom: 0;
+                right: 75px;
             }
-            .info {
-                font-size: 14px;
-                line-height: 17px;
-                color: #AAAAAA;
+            .swiper-wrapper {
+                transform: translate3d(-475px, 0px, 0px);
+                .item {
+                    max-width: 575px;
+                    margin: 83px;
+                    p {
+                        font-size: 20px;
+                        line-height: 45px;
+                        letter-spacing: 0.5px;
+                        position: relative;
+                        margin-bottom: 60px;
+                        &::after {
+                            position: absolute;
+                            content: url(../img/r.png);
+                            right: -25px;
+                            bottom: -30px;
+                        }
+                        &::before {
+                            position: absolute;
+                            content: url(../img/l.png);
+                            left: -35px;
+                            top: -5px;
+                        }
+                    }
+                    .wrap {
+                        .wrap_info {
+                            .name {
+                                font-weight: 500;
+                                font-size: 20px;
+                                line-height: 24px;
+                                margin-bottom: 18px;
+                                color: #FF7A50;
+                            }
+                            .info {
+                                font-size: 14px;
+                                line-height: 17px;
+                                color: #AAAAAA;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -471,6 +532,7 @@ h2 {
                 font-size: 18px;
                 color: #363853;
                 opacity: 0.9;
+                outline: none;
                 &::placeholder {
                     font-size: 18px;
                     color: #363853;
@@ -492,7 +554,7 @@ h2 {
                 position: relative;
                 &::before {
                     position: absolute;
-                    content: url(/img/vvector.png);
+                    content: url(../img/vvector.png);
                     left: 20px;
                 }
             }
@@ -525,17 +587,17 @@ h2 {
             }
             .inf-map::before {
                 position: absolute;
-                content: url(/img/Location.svg);
+                content: url(../img/Location.svg);
                 left: 0;
             }
             .inf-tel::before {
                 position: absolute;
-                content: url(/img/Calling.svg);
+                content: url(../img/Calling.svg);
                 left: 0;
             }
             .inf-mail::before {
                 position: absolute;
-                content: url(/img/Message.svg);
+                content: url(../img/Message.svg);
                 left: 0;
             }
         }
@@ -555,9 +617,6 @@ h2 {
                         font-size: 18px;
                         line-height: 49px;
                         letter-spacing: 0.01em;
-                    }
-                    li:not(:last-child) {
-                        margin-right: 0;
                     }
                     li+li {
                         margin-right: 99px;
