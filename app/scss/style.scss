@@ -115,8 +115,6 @@
         }
         >img {
             position: relative;
-            right: -58px;
-            height: auto;
         }
     }
 }
@@ -438,21 +436,37 @@ h2 {
         .slider_text {
             overflow: hidden;
             position: relative;
-            .btn_next {
+            flex-grow: 0;
+            margin-left: 83px;
+            button {
                 position: absolute;
+                right: 50px;
+                z-index: 99;
                 bottom: 0;
-                right: 0;
+                display: flex;
+                align-items: center;
+                &.swiper-button-disabled {
+                    svg {
+                        path {
+                            stroke: #7b7b7b;
+                        }
+                    }
+                }
+                svg {
+                    path {
+                        stroke: #FF7A50;
+                    }
+                }
             }
             .btn_prev {
                 position: absolute;
                 bottom: 0;
                 right: 75px;
+                margin-right: 75px;
             }
             .swiper-wrapper {
-                transform: translate3d(-475px, 0px, 0px);
                 .item {
-                    max-width: 575px;
-                    margin: 83px;
+                    padding: 0 35px;
                     p {
                         font-size: 20px;
                         line-height: 45px;
@@ -497,10 +511,9 @@ h2 {
 .s7 {
     padding: 60px 0;
     .block {
-        height: 312px;
         background: #FF7A50;
         border-radius: 20px;
-        padding: 58px 160px;
+        padding: 58px 0px;
         text-align: center;
         .title {
             font-weight: 500;
@@ -508,6 +521,7 @@ h2 {
             line-height: 47px;
             margin-bottom: 12px;
             color: #FFFFFF;
+            text-align: center;
         }
         .text {
             font-size: 16px;
@@ -515,6 +529,7 @@ h2 {
             margin-bottom: 30px;
             color: #FFFFFF;
             opacity: 0.8;
+            text-align: center;
         }
         form {
             background: #FFFFFF;
@@ -522,9 +537,10 @@ h2 {
             border-radius: 70px;
             padding: 25px 10px 25px 45px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            height: 78px;
+            margin: 0 auto;
+            max-width: 839px;
             input {
                 border: none;
                 flex-grow: 1;
@@ -532,6 +548,7 @@ h2 {
                 font-size: 18px;
                 color: #363853;
                 opacity: 0.9;
+                text-align: left;
                 outline: none;
                 &::placeholder {
                     font-size: 18px;
@@ -545,13 +562,13 @@ h2 {
             button {
                 font-weight: 500;
                 font-size: 20px;
-                line-height: 30px;
                 text-align: center;
                 color: #FFFFFF;
                 background: #FF7A50;
                 border-radius: 70px;
-                padding: 15px 34px 15px 44px;
+                padding: 15px 34px 15px 46px;
                 position: relative;
+                flex-shrink: 0;
                 &::before {
                     position: absolute;
                     content: url(../img/vvector.png);
@@ -625,27 +642,28 @@ h2 {
             }
         }
     }
-    .footer_copy {
-        height: 1px;
-        background: #96969626;
-        .block {
-            display: flex;
-            justify-content: space-between;
-            padding: 26px 0 36px 0;
-            .info {
+}
+
+.footer_copy {
+    height: 1px;
+    background: #96969626;
+    .block {
+        display: flex;
+        justify-content: space-between;
+        padding: 26px 0 36px 0;
+        .info {
+            font-size: 14px;
+            line-height: 14px;
+            color: #646464;
+        }
+        .link {
+            a {
                 font-size: 14px;
                 line-height: 14px;
                 color: #646464;
             }
-            .link {
-                a {
-                    font-size: 14px;
-                    line-height: 14px;
-                    color: #646464;
-                }
-                a+a {
-                    margin-left: 50px;
-                }
+            a+a {
+                margin-left: 50px;
             }
         }
     }
